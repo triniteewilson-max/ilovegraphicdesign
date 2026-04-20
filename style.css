@@ -1,0 +1,360 @@
+.body {
+    background-color: rgb(0, 0, 0);
+    padding: 15px;
+    padding-bottom: 0%;
+    padding-top: 10px;
+}
+@font-face {
+    font-family: 'UglyFont';
+    src: url(fonts/MyUglyHandwriting-Regular.otf);
+}
+/* for most text, this is the font I want */
+.text{
+    font-family:'UglyFont';
+}
+.maincontainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;}
+    /* background-image: url(images/IMG_1677.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+    /* width: 100%;
+    background-attachment: fixed;
+    
+} */ 
+.mainmain {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/IMG_1677.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    background-attachment: fixed;
+}
+
+
+.header {
+    height: 1.5%;
+    width: 100%;
+    background-color:rgb(207, 213, 220);
+    display: flex;
+    gap: 30%;
+}
+
+.timedate {
+    /* background-color: brown; */
+    height: 85%;
+    width: 30%;
+    display: flex;
+    margin-top: 25px;
+    margin-right: 25px;
+    align-content: flex-end;
+}
+
+.time {
+    height: 20%;
+    width: 150px;
+    /* background-color: yellow; */
+    margin: 15px;
+    flex-direction: column;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.date {
+    height: 20%;
+    width: 150px;
+    /* background-color: yellow; */
+    margin: 15px;
+    flex-direction: column;
+}
+
+.title {
+    background-color: brown;
+    height: 85%;
+    width: 45%;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-left: 25px;
+    align-content: flex-start;
+}
+
+
+/* middle container div */
+.middlecontainer {
+    height: 80%;
+    width: 100%;
+}
+
+.middlesection {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+/* message notification css */
+.macos-notification {
+    /* 1. Dimensions and Placement */
+    width: 350px;
+    padding: 12px 16px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+
+    /* 2. macOS Glassmorphism Effect */
+    background: rgba(255, 255, 255, 0.7);
+    /* Translucent white */
+    backdrop-filter: blur(25px) saturate(180%);
+    /* The 'frosted glass' look */
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+
+    /* 3. Border and Shadows */
+    border-radius: 18px;
+    /* Modern macOS rounded corners */
+    border: 0.5px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(200, 77, 77, 0.1);
+
+    /* 4. Font Styling */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1d1d1f;
+
+    animation-name:slideIn;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    transition: transform 0.5s ease;
+}
+@keyframes slideIn {
+    from {
+        right: -300px;
+        opacity: 0;
+    }
+
+    to {
+        right: 20px;
+        opacity: 1;
+    }
+}
+.macos-notification:hover{
+    transform: scale(1.1);
+}
+.notif-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+}
+
+.app-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    border-radius: 4px;
+}
+
+.notif-time {
+    margin-left: auto;
+}
+
+.notif-body {
+    line-height: 1.4;
+}
+
+.sender-name {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.message-preview {
+    margin: 0;
+    font-size: 13px;
+    color: #333;
+}
+/* message code end */
+/* message. popup code */
+.messbutton {
+    margin-left: 150px;
+    margin-top: 150px;
+}
+
+.message{
+    height: 600px;
+    width: 300px;
+    align-items: center;
+
+}
+
+.messpopup {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    /* Dark background */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.messpop {
+    background-image: url(images/new.png);
+    background-size: cover;
+    /* Ensures image covers area properly [1] */
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Centers the image [2] */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 900px;
+    height: 800px;
+    margin-bottom: 300px;
+    /* margin-top: 300px; */
+    position: relative;
+    margin-left: 250px;
+    /* Needed for z-index context */
+}
+
+.text {
+    font-family: 'UglyFont', sans-serif;
+    font-size: large;
+    margin-top: 5px;
+    color: rgb(0, 0, 0);
+    /* Add a contrasting color */
+    position: relative;
+    /* Brings text above background */
+    z-index: 10;
+}
+.textyou {
+    font-family: 'UglyFont', sans-serif;
+    font-size: 35px;
+    margin-top: 100px;
+    margin-right: 100px;
+    color: rgb(0, 0, 0);
+    /* Add a contrasting color */
+    position: relative;
+    /* Brings text above background */
+    z-index: 1;
+    display: inline-block;
+}
+/* message popup */
+.todolist {
+    height: 100%;
+    width: 30%;
+    background-image: url(images02/Untitled_Artwork\ \(6\).png);
+    margin: 15px;
+    margin-left: 75px;
+    background-repeat: no-repeat;
+    background-size: 888px;
+    background-position: center;
+    /* background-color: #f0f0f0; */
+}
+.textmini {
+    /* iMessage Blue */
+    background-color: #aab8c1;
+    color: rgb(0, 0, 0);
+
+    /* Font and shape */
+    font-family: 'UglyFont';
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 20px;
+
+        margin-right: 100px;
+
+    /* Positioning */
+    max-width: 70%;
+  
+    /* Aligns to right */
+    margin-left: 175px;
+    word-wrap: break-word;
+    display: block;
+    clear: both;
+}
+.bottom {
+    background-color: rgb(154, 153, 182);
+    height: 50%;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    opacity: 50%;
+    border-radius: 25px;
+    margin-bottom: 5px;
+}
+.facebook{
+        width: 50px;
+        height: 50px;
+        background-image: url('images/facebook.PNG');
+        background-size: cover;
+        /* Ensures the image fills the button */
+        border: none;
+    }
+
+.twitter{
+    width: 50px;
+        height: 50px;
+        background-image: url('images/quacker.PNG');
+        filter: brightness(120%);
+        background-size: cover;
+        border: none;
+}
+.tumblr{
+    width: 50px;
+        height: 50px;
+        background-image: url('images/tumblr.PNG');
+        background-size:cover;
+        border: none;
+        margin-bottom: 15px;
+        opacity: 200%;
+}
+.instagram{
+    width: 50px;
+        height: 50px;
+        background-image: url('images/instagram.PNG');
+        background-size: cover;
+        border: none;
+}
+.filesbutton{
+    margin-left: 150px;
+    margin-top: 150px;
+}
+ .files{
+    height: 600px;
+    width: 300px;
+    align-items: center;
+    
+ }
+ .filespopup{
+    display: none;
+        /* Hidden by default */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        /* Dark background */
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+ }
+ .filespop{
+    background-image: url(images/popupbox.png);
+    background-size: 150%;
+    background-repeat: no-repeat;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        width: 300px;
+        height: 800px;
+ }
