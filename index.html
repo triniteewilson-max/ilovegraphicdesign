@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>New Laptop</title>
+    <link rel="icon" type="image/png" href="images/favicon.PNG">
+
+
+</head>
+<body class="body">
+    <div class="mainmain">
+
+     <div class="maincontainer">
+
+        <div class="header">
+            <div class="timedate">
+                <div class="time"><p class="text">What time is it anymore?</p> </div>
+                <div class="date"><p class="text">FUCK IT ALREADY
+                </p></div>
+            </div>
+        </div>
+            <!-- message notification -->
+            <button onclick="openMessages()" type="button">
+                <div class="macos-notification">
+                    <div class="notif-header">
+                        <img src="images/message_alert.PNG" alt="App Icon" class="app-icon">
+                        <span class="app-name">MESSAGES</span>
+                        <span class="notif-time">now</span>
+                    </div>
+                    <div class="notif-body">
+                        <strong class="sender-name">Tommy Malton</strong>
+                        <p class="message-preview">Hey! You need to examine them files, and then empty the trash. It's for 5 points. GET IT DONE BUDDY! ☕️</p>
+                    </div>
+                </div>
+            </button>
+            <div id="MessOverlay" class="messpopup" style="display: none;">
+                <div class="messpop">
+                    <h2>MESSAGES</h2>
+                    <p class="textyou">
+                   Tommy Malton
+                        <p class="textmini">
+                            Hey! You need to examine them files, and then empty the trash. It's for 5 points. GET IT DONE BUDDY!
+                        </p>
+                    </p>
+                    <!-- Fixed the onclick here -->
+                    <button onclick="closeMessages()">Close</button>
+                </div>
+            </div>
+            <script>
+                function openMessages() {
+                    document.getElementById("MessOverlay").style.display = "block";
+                }
+
+                function closeMessages() {
+                    document.getElementById("MessOverlay").style.display = "none";
+                }
+            </script>
+
+            <!-- message popup settings -->
+            
+            <!--now, im going to don the same thing, but this time it's for the trashcan. Also to get the files into the trashcan, i need a drag and drop option. idk, we're fucking around and finding out-->
+                 
+                        </div>
+                    </div>
+                    <!-- message popup settings -->
+                    <!-- MESSAGE SECTION -->
+                    <!--now, im going to don the same thing, but this time it's for the trashcan. Also to get the files into the trashcan, i need a drag and drop option. idk, we're fucking around and finding out-->
+                  
+            <div class="files">
+                <!-- trigger files button-->
+                <button class="filesbutton" type="button" style="background: none; border: none; cursor: pointer;"
+                    onclick="openPopup()">
+                    <img src="images/IMG_1686.PNG" alt="files" width="70px">
+                </button>
+            
+                <!--pop up container for files icon button -->
+                <div id="FilesOverlay" class="filespopup" style="display: none;">
+                    <div class="filespop">
+                        <h2>Files!!!</h2>
+                        <p class="text">
+                        <ul>
+                            <li><a href="http://127.0.0.1:5501/third%20page/index.html">PIXELIZATION</a></li>
+                            <li><a href="http://127.0.0.1:5501/second%20page%20/index.html">INDESIGN</a></li>
+                            <li><a href="http://127.0.0.1:5501/fourth%20page%20/index.html">Lagging</a></li>
+                            <li><a href="http://127.0.0.1:5501/fifth%20page%20/index.html">WHAT MONEY?!</a></li>
+                        </ul>
+                        </p>
+                        <!-- Fixed the onclick here -->
+                        <button onclick="closePopup()">Close</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+<!-- end of message notification -->
+            <!-- files settings pop up -->
+            
+            <!--now, im going to don the same thing, but this time it's for the trashcan. Also to get the files into the trashcan, i need a drag and drop option. idk, we're fucking around and finding out-->
+            <script>
+                function openPopup() {
+                    document.getElementById('FilesOverlay').style.display = 'block';
+                }
+                function closePopup() {
+                    document.getElementById('FilesOverlay').style.display = 'none';
+                }
+            </script>
+
+            </div>
+
+            </div>
+        </div>
+        <!-- <div class="rightcontainer"></div>-->
+        <footer class="bottom">
+            <div class="facebook">
+                <button class="facebutton"></button>
+            </div>
+            <div class="twitter"><button class="twitbutton"></button></div>
+            <div class="tumblr"><button class="tumbbutton"></button></div>
+            <div class="instagram"><button class="instabutton"></button></div>
+        </footer>
+    </div>
+    </div>
+</div>
+</body>
+
+</html>
